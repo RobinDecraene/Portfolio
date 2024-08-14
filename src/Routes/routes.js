@@ -1,4 +1,5 @@
 const ROUTES = {
+  home: "/",
   projects: "/projects",
   
   notFound: "*"
