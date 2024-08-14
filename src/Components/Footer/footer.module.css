@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #1B263B;
+  padding: 1rem;
+  color: #E0E1DD;
+}
+
+.footerAlign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.footerLeft {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.activeNav {
+  color: #8699B2;
+  font-weight: bold;
+}
