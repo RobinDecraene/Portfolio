@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #1B263B;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #E0E1DD;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.activeNav {
+  background-color: #8699B2;
+  color: #1B263B;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1.25rem;
+}
+
+.navRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
