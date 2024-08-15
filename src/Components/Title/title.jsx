@@ -5,9 +5,9 @@ const Title = ({children}) => {
 
 
   return (
-    <h1 className={style.title}>
+    <h2 className={style.title}>
       {children}
-    </h1>
+    </h2>
   );
 };
 
