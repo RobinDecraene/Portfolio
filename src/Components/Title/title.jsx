@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './title.module.css';
 
-const Title = ({children}) => {
+const Title = ({children, customClass}) => {
 
 
   return (
-    <h2 className={style.title}>
+    <h2 className={`${style.title} ${customClass}`}>
       {children}
     </h2>
   );
