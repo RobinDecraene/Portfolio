@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './projects.module.css';
 import Title from '../../Components/Title/title';
+import Page from '../../Components/Page/page';
 
 
 const Projects = () => {
@@ -8,7 +9,7 @@ const Projects = () => {
 
 
   return (
-    <div className={style.page}>
+    <Page>
       <Title>Websites</Title>
       <div className={style.cards}>
         <div className={style.card}>
@@ -66,7 +67,7 @@ const Projects = () => {
         </div>
       </div>
 
-    </div>
+    </Page>
   );
 };
 
