@@ -65,6 +65,7 @@ const Projects = () => {
           <p>Title</p>
         </div>
       </div>
+
     </div>
   );
 };
