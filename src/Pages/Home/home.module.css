@@ -1,0 +1,22 @@
+.image {
+  border-radius: 1.25rem;
+  width: 240%;
+  height: 100%;
+  margin-right: 5rem;
+}
+
+.sectionBlue {
+  background-color: #8699B2;
+  width: 100%;
+  justify-content: center;
+}
+
+.sectionBlueWidht {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.titleWhite {
+  color: #E0E1DD;
+}
