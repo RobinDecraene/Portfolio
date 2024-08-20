@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './home.module.css';
-import Button from '../../Components/Button/button';
 import Title from '../../Components/Title/title';
 import { FaHorse } from "react-icons/fa";
 import { IoGameController } from "react-icons/io5";
@@ -8,6 +7,7 @@ import { IoIosFitness } from "react-icons/io";
 import Page from '../../Components/Page/page';
 import Section from '../../Components/Section/section';
 import profielfoto from '../../Images/ik.png';
+import LinkButton from '../../Components/Button/linkbutton';
 
 
 const Home = () => {
@@ -22,12 +22,12 @@ const Home = () => {
             <h2>Front end developer</h2>
           </span>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-          <Button>Mijn LinkedIn</Button>
+          <LinkButton link='https://www.linkedin.com/in/robin-decraene-5ab306220/'>Mijn LinkedIn</LinkButton>
         </div>
       </Section>
 
 
-      <Section customClass={style.sectionBlue}>
+      <section className={style.sectionBlue}>
         <div className={style.sectionBlueWidht}>
           <div>
             <Title customClass={style.titleWhite}>Werkervaring</Title>
@@ -46,7 +46,7 @@ const Home = () => {
           </div>
         </div>
         
-      </Section>
+      </section>
 
       <Section>
         <div>
@@ -62,17 +62,17 @@ const Home = () => {
           <div>
             <Title>Hobbies</Title>
             <span>
-              <FaHorse size={25}/>
+              <FaHorse size={25} color='#8699B2'/>
               <p>Paardrijden</p>
             </span>
 
             <span>
-              <IoGameController size={25}/>
+              <IoGameController size={25} color='#8699B2'/>
               <p>Gamen</p>
             </span>
 
             <span>
-              <IoIosFitness size={25}/>
+              <IoIosFitness size={25} color='#8699B2'/>
               <p>Fitness</p>
             </span>
           </div>

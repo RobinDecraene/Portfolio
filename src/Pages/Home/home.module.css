@@ -6,9 +6,12 @@
 }
 
 .sectionBlue {
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: #8699B2;
   width: 100%;
-  justify-content: center;
 }
 
 .sectionBlueWidht {
@@ -18,5 +21,5 @@
 }
 
 .titleWhite {
-  color: #E0E1DD;
+  color: #fafafa !important;
 }
