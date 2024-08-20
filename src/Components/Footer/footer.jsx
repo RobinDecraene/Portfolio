@@ -14,7 +14,7 @@ const Footer = () => {
           <Link to={ROUTES.home} className={location.pathname === ROUTES.home ? style.activeNav : ''}>Home</Link>
           <Link to={ROUTES.projects} className={location.pathname === ROUTES.projects ? style.activeNav : ''}>Projects</Link>
         </div>
-        <FaStar size={25}/>
+        <FaStar size={25} color='#E0E1DD'/>
         <p>© 2024 Decraene Robin </p>
       </div>
     </footer>

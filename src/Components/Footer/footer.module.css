@@ -3,7 +3,10 @@ footer {
   justify-content: center;
   background-color: #0D1B2A;
   padding: 1rem;
-  color: #E0E1DD;
+  
+}
+footer p {
+  color: #E0E1DD !important;
 }
 
 .footerAlign {
