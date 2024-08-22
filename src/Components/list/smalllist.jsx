@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './bulletpoints.module.css';
+import style from './list.module.css';
 import { FaStar } from "react-icons/fa";
 
-const Small = ({children}) => {
+const SmallList = ({children}) => {
 
   return (
     <span className={`${style.bulletpoints} ${style.small}`}>
@@ -15,4 +15,4 @@ const Small = ({children}) => {
   );
 };
 
-export default Small;
+export default SmallList;

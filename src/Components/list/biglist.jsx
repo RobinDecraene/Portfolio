@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './bulletpoints.module.css';
+import style from './list.module.css';
 import { FaStar } from "react-icons/fa";
 
-const Big = ({children}) => {
+const BigList = ({children}) => {
 
   return (
     <div className={`${style.bulletpoints} ${style.big}`}>
@@ -14,4 +14,4 @@ const Big = ({children}) => {
   );
 };
 
-export default Big;
+export default BigList;
