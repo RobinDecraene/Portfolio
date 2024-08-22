@@ -1,0 +1,21 @@
+.bulletpoints {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.big {
+  margin-bottom: 1.5rem;
+}
+
+.small {
+  margin-bottom: 0.5rem;
+}
+
+.bulletpoints p {
+  margin: 0;
+}
+
+.star {
+  margin-right: 1rem;
+}
