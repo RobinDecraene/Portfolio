@@ -71,15 +71,15 @@ const Home = () => {
 
           <div>
             <Title customClass={style.titleWhite}>Vaardigheden</Title>
-            <SmallList>React</SmallList>
-            <SmallList>React Native</SmallList>
+            <SmallList color={'#E0E1DD'}>React</SmallList>
+            <SmallList color={'#E0E1DD'}>React Native</SmallList>
           </div>
         </div>
         
       </section>
 
       <Section>
-        <div>
+        <div className={style.properties}>
           <Title>Eigenschappen</Title>
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
           </p>
@@ -88,31 +88,34 @@ const Home = () => {
           </p>
         </div>
 
-        <div>
+        <div className={style.other}>
           <div>
             <Title>Hobbies</Title>
-            <span>
-              <FaHorse size={25} color='#8699B2'/>
-              <p>Paardrijden</p>
-            </span>
+            <div className={style.hobbies}>
+              <span>
+                <FaHorse size={25} color='#8699B2'/>
+                <p>Paardrijden</p>
+              </span>
 
-            <span>
-              <IoGameController size={25} color='#8699B2'/>
-              <p>Gamen</p>
-            </span>
+              <span>
+                <IoGameController size={25} color='#8699B2'/>
+                <p>Gamen</p>
+              </span>
 
-            <span>
-              <IoIosFitness size={25} color='#8699B2'/>
-              <p>Fitness</p>
-            </span>
+              <span>
+                <IoIosFitness size={25} color='#8699B2'/>
+                <p>Fitness</p>
+              </span>
+            </div>
           </div>
 
           <div>
             <Title>Talen</Title>
-            <ul>
-              <li>Nederlands</li>
-              <li>Engels</li>
-            </ul>
+            <span className={style.language}>
+              <SmallList color={'#8699B2'} customClass={style.languageColor}>Nederlands</SmallList>
+              <SmallList color={'#8699B2'} customClass={style.languageColor}>Engels</SmallList>
+            </span>
+
           </div>
         </div>
       </Section>

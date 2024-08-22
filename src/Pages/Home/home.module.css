@@ -14,8 +14,16 @@
   width: 120%;
 }
 
+@font-face {
+  font-family: 'Candara';
+  src: url('../../fonts/candara-font-family/Candara_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .titles h1, .titles h2 {
   margin: 0;
+  font-family: 'Candara', sans-serif;
 }
 
 .titles h1 {
@@ -47,4 +55,34 @@
 
 .titleWhite {
   color: #fafafa !important;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.properties {
+  width: 70%;
+}
+
+.other {
+  width: 25%;
+}
+
+.hobbies span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.languageColor p {
+  color: #0D1B2A;
 }
