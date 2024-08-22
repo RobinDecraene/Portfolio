@@ -13,7 +13,7 @@ import Projects from './Pages/Projects/projects';
 
 function App() {
   return (
-    <div className="white">
+    <div>
       <Header/>
       <Routes>
         <Route path={ROUTES.home} element={<Home/>} /> 
