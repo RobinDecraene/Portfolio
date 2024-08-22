@@ -1,8 +1,32 @@
 .image {
   border-radius: 1.25rem;
-  width: 240%;
+  width: 100%;
   height: 100%;
-  margin-right: 5rem;
+  margin-right: 4rem;
+  max-width: 420px;
+}
+
+.firstSection {
+  align-items: center;
+}
+
+.firstSectionText{
+  width: 120%;
+}
+
+.titles h1, .titles h2 {
+  margin: 0;
+}
+
+.titles h1 {
+  margin-bottom: 0.5rem;
+  font-size: 5rem;
+  color: #415A77;
+}
+
+.titles h2 {
+  font-size: 3rem;
+  color: #8699B2;
 }
 
 .sectionBlue {
@@ -17,6 +41,7 @@
 .sectionBlueWidht {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 80%;
 }
 

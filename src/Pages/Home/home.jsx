@@ -8,16 +8,19 @@ import Page from '../../Components/Page/page';
 import Section from '../../Components/Section/section';
 import profielfoto from '../../Images/ik.png';
 import LinkButton from '../../Components/Button/linkbutton';
+import BigList from '../../Components/list/biglist';
+import SmallList from '../../Components/list/smalllist';
+
 
 
 const Home = () => {
 
   return (
     <Page>
-      <Section>
+      <Section customClass={style.firstSection}>
         <img src={profielfoto} alt='profielfoto' className={style.image}/>
-        <div>
-          <span>
+        <div className={style.firstSectionText}>
+          <span className={style.titles}>
             <h1>Ik ben Robin Decraene</h1>
             <h2>Front end developer</h2>
           </span>
@@ -31,18 +34,45 @@ const Home = () => {
         <div className={style.sectionBlueWidht}>
           <div>
             <Title customClass={style.titleWhite}>Werkervaring</Title>
+            <BigList>
+              <p>Esign - Gent</p>
+              <p>Front-end • Stagair</p>
+              <p>Jan 2024 - Apr 2024</p>
+            </BigList>
 
+            <BigList>
+              <p>Stad Gent - Gent</p>
+              <p>Kleuterkamp • Animator</p>
+              <p>2021 - 2023</p>
+            </BigList>
+
+            <BigList>
+              <p>Bassischool De Vuurtoren - Drongen</p>
+              <p>Lo Leerkracht • Stagair</p>
+              <p>Apr 2021</p>
+            </BigList>
           </div>
 
           <div>
             <Title customClass={style.titleWhite}>Opleiding</Title>
+            <BigList>
+              <p>Arteveldehogeschool - Gent</p>
+              <p>Bachelor in Grafische en Digitale Media,
+                <br/> New media development</p>
+              <p>2021 - 2024</p>
+            </BigList>
+
+            <BigList>
+              <p>Atheneum Voskenslaan - Gent</p>
+              <p>Lichamelijke opvoeding en sport</p>
+              <p>2015-2021</p>
+            </BigList>
           </div>
 
           <div>
             <Title customClass={style.titleWhite}>Vaardigheden</Title>
-            <ul>
-              <li>React</li>
-            </ul>
+            <SmallList>React</SmallList>
+            <SmallList>React Native</SmallList>
           </div>
         </div>
         
