@@ -6,7 +6,7 @@ const BigList = ({children}) => {
 
   return (
     <div className={`${style.bulletpoints} ${style.big}`}>
-      <FaStar size={30} color='#415A77' className={style.star}/>
+      <FaStar size={30} color='#E0E1DD' className={style.star}/>
       <span>
         {children}
       </span>

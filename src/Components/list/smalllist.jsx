@@ -6,7 +6,7 @@ const SmallList = ({children}) => {
 
   return (
     <span className={`${style.bulletpoints} ${style.small}`}>
-      <FaStar size={18} color='#415A77' className={style.star}/>
+      <FaStar size={18} color='#E0E1DD' className={style.star}/>
       <p>
         {children}
       </p>
