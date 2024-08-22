@@ -83,6 +83,6 @@
   align-items: center;
 }
 
-.languageColor p {
-  color: #0D1B2A;
+.languageColor {
+  color: #0D1B2A !important;
 }

@@ -5,9 +5,9 @@ import { FaStar } from "react-icons/fa";
 const SmallList = ({children, customClass, color}) => {
 
   return (
-    <span className={`${style.bulletpoints} ${style.small} ${customClass}`}>
+    <span className={`${style.bulletpoints} ${style.small}`}>
       <FaStar size={18} color={color} className={style.star}/>
-      <p>
+      <p  className={customClass}>
         {children}
       </p>
 
