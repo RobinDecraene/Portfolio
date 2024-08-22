@@ -10,6 +10,20 @@ a {
   color: #E0E1DD;
 }
 
+@font-face {
+  font-family: 'Candara';
+  src: url('../../fonts/candara-font-family/Candara_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.name {
+  font-family: 'Candara', sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -30,5 +44,5 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 20%;
+  width: 12rem;
 }

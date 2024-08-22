@@ -19,7 +19,7 @@ footer p {
 .footerLeft {
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 12rem;
 }
 
 .activeNav {

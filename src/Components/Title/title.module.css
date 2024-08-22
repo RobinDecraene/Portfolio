@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'Candara';
+  src: url('../../fonts/candara-font-family/Candara_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .title {
   color: #415A77;
   margin-bottom: 2rem;
+  font-family: 'Candara', sans-serif;
 }
