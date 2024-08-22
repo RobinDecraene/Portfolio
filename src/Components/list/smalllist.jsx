@@ -2,11 +2,11 @@ import React from 'react';
 import style from './list.module.css';
 import { FaStar } from "react-icons/fa";
 
-const SmallList = ({children}) => {
+const SmallList = ({children, customClass, color}) => {
 
   return (
-    <span className={`${style.bulletpoints} ${style.small}`}>
-      <FaStar size={18} color='#E0E1DD' className={style.star}/>
+    <span className={`${style.bulletpoints} ${style.small} ${customClass}`}>
+      <FaStar size={18} color={color} className={style.star}/>
       <p>
         {children}
       </p>
