@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './home.module.css';
 import Title from '../../Components/Title/title';
 import { FaHorse } from "react-icons/fa";
@@ -10,15 +10,37 @@ import profielfoto from '../../Images/ik.png';
 import LinkButton from '../../Components/Button/linkbutton';
 import BigList from '../../Components/list/biglist';
 import SmallList from '../../Components/list/smalllist';
-
-
+import { firebase } from '../../firebase';
 
 const Home = () => {
+  const [programmingSkills, setProgrammingSkills] = useState([]);
+  const [otherSkills, setOtherSkills] = useState([]);
+
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const doc = await firebase.firestore().collection('skills').doc('skills').get();
+        if (doc.exists) {
+          setProgrammingSkills(doc.data().programming || []);
+          setOtherSkills(doc.data().other || []);
+        } else {
+          console.log('No such document!');
+        }
+      } catch (error) {
+        console.error('Error getting document:', error);
+      }
+    };
+
+    fetchSkills();
+  }, []);
 
   return (
     <Page>
       <Section customClass={style.firstSection}>
-        <img src={profielfoto} alt='profielfoto' className={style.image}/>
+        <span className={style.image}>
+          <img src={profielfoto} alt='profielfoto' />
+        </span>
+
         <div className={style.firstSectionText}>
           <span className={style.titles}>
             <h1>Ik ben Robin Decraene</h1>
@@ -71,8 +93,18 @@ const Home = () => {
 
           <div>
             <Title customClass={style.titleWhite}>Vaardigheden</Title>
-            <SmallList color={'#E0E1DD'}>React</SmallList>
-            <SmallList color={'#E0E1DD'}>React Native</SmallList>
+              <div className={style.skills}>
+                <span>
+                  {programmingSkills.map((skill, index) => (
+                    <SmallList key={index} color={'#E0E1DD'}>{skill}</SmallList>
+                  ))}
+                </span>
+                <span>
+                  {otherSkills.map((skill, index) => (
+                    <SmallList key={index} color={'#E0E1DD'}>{skill}</SmallList>
+                  ))}
+                </span>
+              </div>
           </div>
         </div>
         
@@ -93,17 +125,17 @@ const Home = () => {
             <Title>Hobbies</Title>
             <div className={style.hobbies}>
               <span>
-                <FaHorse size={25} color='#8699B2'/>
+                <FaHorse size={30} color='#8699B2'/>
                 <p>Paardrijden</p>
               </span>
 
               <span>
-                <IoGameController size={25} color='#8699B2'/>
+                <IoGameController size={30} color='#8699B2'/>
                 <p>Gamen</p>
               </span>
 
               <span>
-                <IoIosFitness size={25} color='#8699B2'/>
+                <IoIosFitness size={30} color='#8699B2'/>
                 <p>Fitness</p>
               </span>
             </div>

@@ -1,9 +1,11 @@
 .image {
-  border-radius: 1.25rem;
+  width: 30%;
+}
+
+.image img {
   width: 100%;
   height: 100%;
-  margin-right: 4rem;
-  max-width: 420px;
+  border-radius: 1.25rem;
 }
 
 .firstSection {
@@ -11,7 +13,7 @@
 }
 
 .firstSectionText{
-  width: 120%;
+  width: 65%;
 }
 
 @font-face {
@@ -24,16 +26,16 @@
 .titles h1, .titles h2 {
   margin: 0;
   font-family: 'Candara', sans-serif;
+  line-height: 4.4rem;
 }
 
 .titles h1 {
-  margin-bottom: 0.5rem;
-  font-size: 5rem;
+  font-size: 4.8rem;
   color: #415A77;
 }
 
 .titles h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #8699B2;
 }
 
@@ -57,6 +59,11 @@
   color: #fafafa !important;
 }
 
+.skills {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hobbies {
   display: flex;
   flex-direction: row;
@@ -65,7 +72,7 @@
 }
 
 .properties {
-  width: 70%;
+  width: 65%;
 }
 
 .other {
