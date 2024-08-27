@@ -46,7 +46,11 @@ const Home = () => {
             <h1>Ik ben Robin Decraene</h1>
             <h2>Front end developer</h2>
           </span>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <p className={style.intro}>
+            Als net afgestudeerde front-end developer wil ik mijn programmeervaardigheden verder ontwikkelen door aan uitdagende projecten te werken.
+            Ik streef ernaar mijn kennis van de talen die ik al beheers te verdiepen en nieuwe programmeertalen te leren. Mijn doel is om gebruiksvriendelijke,
+            toegankelijke en visueel aantrekkelijke website te ontwikkelen.
+          </p>
           <LinkButton link='https://www.linkedin.com/in/robin-decraene-5ab306220/'>Mijn LinkedIn</LinkButton>
         </div>
       </Section>
@@ -113,10 +117,10 @@ const Home = () => {
       <Section>
         <div className={style.properties}>
           <Title>Eigenschappen</Title>
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-          </p>
-
-          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+          <p>
+            Ik ben een teamspeler die ook de leiding durft te nemen wanneer dat nodig is. Tijdens mijn studie aan Arteveldehogeschool was ik bijvoorbeeld squadlead bij het ontwikkelen van een escaperoom. 
+            Ik kan goed kalm blijven in stressvolle situaties, een vaardigheid die ik heb opgedaan door veel met kleine kinderen te werken. Dit heeft me ook geleerd om zeer verantwoordelijk te zijn. k heb geleerd door veel met kleinde kinderen te werken, 
+            hierdoor ben ik ook zeer verantwoordelijk. Maar het belangrijkste van al is dat ik zeer graag mijn programmeervaardigheden wil verbeteren en zeer graag nieuwe talen wil bijleren. Daarnaast ben ik ook in het bezit van een B-rijbewijs.
           </p>
         </div>
 
