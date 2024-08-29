@@ -1,7 +1,7 @@
 const ROUTES = {
   home: "/",
   projects: "/projects",
-  detail: {path: "/project/:id", to: "/project/"},
+  project: {path: "/projects/:id", to: "/projects/"},
   
   notFound: "*"
 }

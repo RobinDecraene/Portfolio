@@ -8,9 +8,7 @@ import './App.css';
 
 import Home from './Pages/Home/home';
 import Projects from './Pages/Projects/projects';
-import Detail from './Components/DetailProject/detail';
-
-
+import Project from './Components/Project/project';
 
 function App() {
   return (
@@ -20,7 +18,7 @@ function App() {
         <Route path={ROUTES.home} element={<Home/>} /> 
         <Route path={ROUTES.projects} element={<Projects/>}/>
 
-        <Route path={ROUTES.detail.path} element={<Detail/>}/>
+        <Route path={ROUTES.project.path} element={<Project/>}/>
       </Routes>
       <Footer/>
     </div>
