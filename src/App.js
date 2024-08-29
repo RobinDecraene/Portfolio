@@ -8,6 +8,7 @@ import './App.css';
 
 import Home from './Pages/Home/home';
 import Projects from './Pages/Projects/projects';
+import Detail from './Components/DetailProject/detail';
 
 
 
@@ -18,6 +19,8 @@ function App() {
       <Routes>
         <Route path={ROUTES.home} element={<Home/>} /> 
         <Route path={ROUTES.projects} element={<Projects/>}/>
+
+        <Route path={ROUTES.detail.path} element={<Detail/>}/>
       </Routes>
       <Footer/>
     </div>
