@@ -1,8 +1,9 @@
 import React from 'react';
-import style from './detail.module.css';
+import style from './project.module.css';
 import Page from '../Page/page';
 
-const Detail = () => {
+
+const Project = () => {
   
   return (
     <Page>
@@ -11,4 +12,4 @@ const Detail = () => {
   );
 };
 
-export default Detail;
+export default Project;
