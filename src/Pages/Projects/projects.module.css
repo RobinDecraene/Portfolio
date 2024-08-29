@@ -4,3 +4,18 @@
   margin-bottom: 2rem;
   width: 80%;
 }
+
+.card {
+  background-color: #E0E1DD;
+  padding: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.card p {
+  margin: 0;
+  padding: 0;
+}

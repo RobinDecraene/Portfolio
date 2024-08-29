@@ -3,7 +3,10 @@ import style from './projects.module.css';
 import Title from '../../Components/Title/title';
 import Page from '../../Components/Page/page';
 import { firebase } from '../../firebase';
-import Card from '../../Components/Card/card';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Projects = () => {
   const [websites, setWebsites] = useState([]);
@@ -61,29 +64,71 @@ const Projects = () => {
     <Page>
       <Title>Websites</Title>
       <div className={style.cards}>
-        {websites.map((website, index) => (
-          <Card key={index} link={`/detail/${website.id}`}>
-            <p>{website.title}</p>
-          </Card>
-        ))}
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {websites.map((website, index) => (
+            <SwiperSlide>
+              <a href={`/detail/${website.id}`} key={index} className={style.card}>
+                <p>{website.title}</p>
+              </a>
+            </SwiperSlide>
+          ))}
+
+        </Swiper>
       </div>
 
       <Title>Designs</Title>
+
       <div className={style.cards}>
-        {designs.map((design, index) => (
-          <Card key={index} link={`/detail/${design.id}`}>
-            <p>{design.title}</p>
-          </Card>
-        ))}
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {designs.map((design, index) => (
+            <SwiperSlide>
+              <a href={`/detail/${design.id}`} key={index} className={style.card}>
+                <p>{design.title}</p>
+              </a>
+            </SwiperSlide>
+          ))}
+
+        </Swiper>
       </div>
 
       <Title>Other</Title>
       <div className={style.cards}>
-        {other.map(( other, index) => (
-          <Card key={index} link={`/detail/${other.id}`}>
-            <p>{other.title}</p>
-          </Card>
-        ))}
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {other.map(( other, index) => (
+            <SwiperSlide>
+              <a href={`/detail/${other.id}`} key={index} className={style.card}>
+                <p>{other.title}</p>
+              </a>
+            </SwiperSlide>
+          ))}
+          <SwiperSlide></SwiperSlide>
+          <SwiperSlide></SwiperSlide>
+
+        </Swiper>
       </div>
 
     </Page>
