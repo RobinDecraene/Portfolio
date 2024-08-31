@@ -1,0 +1,21 @@
+.firstImg {
+  width: 65%;
+}
+
+.blokImg {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.firstImg img, .blokImg img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+.color {
+  color: #0D1B2A !important;
+}
