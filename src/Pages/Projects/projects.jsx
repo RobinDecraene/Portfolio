@@ -74,8 +74,8 @@ const Projects = () => {
           className="mySwiper"
         >
           {websites.map((website, index) => (
-            <SwiperSlide>
-              <a href={`/projects/${website.id}`} key={index} className={style.card}>
+            <SwiperSlide key={index}>
+              <a href={`/projects/${website.id}`} className={style.card}>
                 <p>{website.title}</p>
               </a>
             </SwiperSlide>
@@ -97,8 +97,8 @@ const Projects = () => {
           className="mySwiper"
         >
           {designs.map((design, index) => (
-            <SwiperSlide>
-              <a href={`/projects/${design.id}`} key={index} className={style.card}>
+            <SwiperSlide key={index}>
+              <a href={`/projects/${design.id}`} className={style.card}>
                 <p>{design.title}</p>
               </a>
             </SwiperSlide>
@@ -119,8 +119,8 @@ const Projects = () => {
           className="mySwiper"
         >
           {other.map(( other, index) => (
-            <SwiperSlide>
-              <a href={`/projects/${other.id}`} key={index} className={style.card}>
+            <SwiperSlide key={index}>
+              <a href={`/projects/${other.id}`} className={style.card}>
                 <p>{other.title}</p>
               </a>
             </SwiperSlide>
