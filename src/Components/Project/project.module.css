@@ -1,9 +1,13 @@
-.firstImg {
+.firstImg, .description {
   width: 65%;
 }
 
+.other {
+  width: 25%;
+}
+
 .blokImg {
-  width: 30%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
