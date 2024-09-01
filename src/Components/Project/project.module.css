@@ -1,4 +1,4 @@
-.firstImg, .description {
+.description {
   width: 65%;
 }
 
@@ -6,20 +6,19 @@
   width: 25%;
 }
 
-.blokImg {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-.firstImg img, .blokImg img {
-  width: 100%;
-  height: auto;
-  border-radius: 1.25rem;
-}
-
 .color {
   color: #0D1B2A !important;
+}
+
+.sliderWidth {
+  width: 95%;
+  height: 35rem;
+}
+
+.singleImage {
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -4,20 +4,23 @@
   margin-bottom: 2rem;
   width: 80%;
 }
+.mySwiper {
+  height: 10rem;
+}
 
 .card {
   display: block;
   position: relative;
-  height: 8rem;
-  width: 99%;
+  height: 9rem;
+  width: 97%;
   border-radius: 1.25rem;
   overflow: hidden;
-  border: solid 1px #8699B2;
+  box-shadow: 5px 5px 6px #E0E1DD;
 }
 
 .card img {
   object-fit: cover;
-  width: 100%;
+  width: 120%;
   height: auto;
 }
 

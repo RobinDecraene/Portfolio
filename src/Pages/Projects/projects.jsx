@@ -124,7 +124,7 @@ const Projects = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className={style.mySwiper}
         >
           {websites.map((website, index) => (
             <SwiperSlide key={index}>
@@ -148,7 +148,7 @@ const Projects = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className={style.mySwiper}
         >
           {designs.map((design, index) => (
             <SwiperSlide key={index}>
@@ -171,7 +171,7 @@ const Projects = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className={style.mySwiper}
         >
           {other.map(( other, index) => (
             <SwiperSlide key={index}>
