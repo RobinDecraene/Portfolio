@@ -6,16 +6,31 @@
 }
 
 .card {
-  background-color: #E0E1DD;
-  padding: 1.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  display: block;
+  position: relative;
+  height: 8rem;
+  width: 99%;
   border-radius: 1.25rem;
-  display: flex;
-  align-items: baseline;
+  overflow: hidden;
+  border: solid 1px #8699B2;
 }
 
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+
 .card p {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
   margin: 0;
   padding: 0;
+  background-color: #8699B2;
+  color: #fafafa;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

@@ -18,46 +18,87 @@ const Projects = () => {
       try {
         const querySnapshot = await firebase.firestore().collection('websites').get();
         const websitesArray = [];
-        querySnapshot.forEach((doc) => {
-          websitesArray.push({ id: doc.id, ...doc.data() });
-        });
+
+        for (const doc of querySnapshot.docs) {
+          const websiteData = doc.data();
+          const imagePath = `Projects/websites/${doc.id}`;
+          
+          const storageRef = firebase.storage().ref(imagePath);
+          const imageRefs = await storageRef.listAll();
+
+          let imageUrl = '';
+          if (imageRefs.items.length > 0) {
+            imageUrl = await imageRefs.items[0].getDownloadURL();
+          }
+
+          websitesArray.push({ id: doc.id, ...websiteData, imageUrl });
+        }
+
         setWebsites(websitesArray);
       } catch (error) {
-        console.error('Error getting documents:', error);
+        console.error('Error fetching websites:', error);
       }
     };
-  
+
     fetchWebsites();
-  
+
     const fetchDesigns = async () => {
       try {
         const querySnapshot = await firebase.firestore().collection('designs').get();
         const designsArray = [];
-        querySnapshot.forEach((doc) => {
-          designsArray.push({ id: doc.id, ...doc.data() });
-        });
+
+        for (const doc of querySnapshot.docs) {
+          const designData = doc.data();
+          const imagePath = `Projects/designs/${doc.id}`;
+          
+          const storageRef = firebase.storage().ref(imagePath);
+          const imageRefs = await storageRef.listAll();
+
+          let imageUrl = '';
+          if (imageRefs.items.length > 0) {
+            imageUrl = await imageRefs.items[0].getDownloadURL();
+          }
+
+          designsArray.push({ id: doc.id, ...designData, imageUrl });
+        }
+
         setDesigns(designsArray);
       } catch (error) {
-        console.error('Error getting documents:', error);
+        console.error('Error fetching designs:', error);
       }
     };
-  
+
     fetchDesigns();
+
   
     const fetchOther = async () => {
       try {
         const querySnapshot = await firebase.firestore().collection('other').get();
         const otherArray = [];
-        querySnapshot.forEach((doc) => {
-          otherArray.push({ id: doc.id, ...doc.data() });
-        });
+    
+        for (const doc of querySnapshot.docs) {
+          const otherData = doc.data();
+          const imagePath = `Projects/other/${doc.id}`;
+          
+          const storageRef = firebase.storage().ref(imagePath);
+          const imageRefs = await storageRef.listAll();
+    
+          let imageUrl = '';
+          if (imageRefs.items.length > 0) {
+            imageUrl = await imageRefs.items[0].getDownloadURL();
+          }
+    
+          otherArray.push({ id: doc.id, ...otherData, imageUrl });
+        }
+    
         setOther(otherArray);
       } catch (error) {
-        console.error('Error getting documents:', error);
+        console.error('Error fetching other:', error);
       }
     };
-  
+    
     fetchOther();
+    
   }, []);
 
   return (
@@ -76,6 +117,7 @@ const Projects = () => {
           {websites.map((website, index) => (
             <SwiperSlide key={index}>
               <a href={`/projects/${website.id}`} className={style.card}>
+                <img src={website.imageUrl} alt={website.title}/>
                 <p>{website.title}</p>
               </a>
             </SwiperSlide>
@@ -99,6 +141,7 @@ const Projects = () => {
           {designs.map((design, index) => (
             <SwiperSlide key={index}>
               <a href={`/projects/${design.id}`} className={style.card}>
+                <img src={design.imageUrl} alt={design.title}/>
                 <p>{design.title}</p>
               </a>
             </SwiperSlide>
@@ -121,6 +164,7 @@ const Projects = () => {
           {other.map(( other, index) => (
             <SwiperSlide key={index}>
               <a href={`/projects/${other.id}`} className={style.card}>
+                <img src={other.imageUrl} alt={other.title}/>
                 <p>{other.title}</p>
               </a>
             </SwiperSlide>
