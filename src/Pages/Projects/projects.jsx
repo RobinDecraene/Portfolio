@@ -101,6 +101,18 @@ const Projects = () => {
     
   }, []);
 
+  const formatDate = (timestamp) => {
+    if (!timestamp) return '';
+  
+    const date = timestamp.toDate();
+  
+    return date.toLocaleDateString('nl-BE', {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    });
+  };
+
   return (
     <Page>
       <Title>Websites</Title>
@@ -118,7 +130,7 @@ const Projects = () => {
             <SwiperSlide key={index}>
               <a href={`/projects/${website.id}`} className={style.card}>
                 <img src={website.imageUrl} alt={website.title}/>
-                <p>{website.title}</p>
+                <p>{website.title}, {formatDate(website.date)}</p>
               </a>
             </SwiperSlide>
           ))}
@@ -142,7 +154,7 @@ const Projects = () => {
             <SwiperSlide key={index}>
               <a href={`/projects/${design.id}`} className={style.card}>
                 <img src={design.imageUrl} alt={design.title}/>
-                <p>{design.title}</p>
+                <p>{design.title}, {formatDate(design.date)}</p>
               </a>
             </SwiperSlide>
           ))}
@@ -165,7 +177,7 @@ const Projects = () => {
             <SwiperSlide key={index}>
               <a href={`/projects/${other.id}`} className={style.card}>
                 <img src={other.imageUrl} alt={other.title}/>
-                <p>{other.title}</p>
+                <p>{other.title}, {formatDate(other.date)}</p>
               </a>
             </SwiperSlide>
           ))}
