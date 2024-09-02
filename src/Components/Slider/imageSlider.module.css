@@ -1,10 +1,19 @@
 .slideStyles {
   height: 100%;
   width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.imageStyles {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: 6px 6px 20px #E0E1DD;
+}
+
 
 .rightArrowStyles {
   position: absolute;
@@ -40,7 +49,8 @@
 }
 
 .dotStyle {
-  margin: 0 3px;
+  margin: 0 0.2rem;
+  margin-top: 0.6rem;
   cursor: pointer;
   font-size: 20px;
   color: #1B263B;

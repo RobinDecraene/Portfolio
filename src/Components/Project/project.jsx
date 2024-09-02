@@ -17,9 +17,7 @@ const Project = () => {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]);
-  const [colorImages, setColorImages] = useState([]); // Add state to store color image URLs
-  const [collection, setCollection] = useState('');
-  const [docId, setDocId] = useState('');
+  const [colorImages, setColorImages] = useState([]);
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -50,10 +48,7 @@ const Project = () => {
           );
 
           setImages(imageUrls);
-          setCollection(collection);
-          setDocId(doc.id);
 
-          // Fetch color images if they exist
           if (projectData.colors) {
             const colorUrls = await Promise.all(
               projectData.colors.map(async (color) => {
@@ -61,7 +56,7 @@ const Project = () => {
                 return colorRef.getDownloadURL();
               })
             );
-            setColorImages(colorUrls); // Store color images in state
+            setColorImages(colorUrls);
           }
         } else {
           console.log('No such document in any collection!');
@@ -92,7 +87,13 @@ const Project = () => {
           </div>
         ) : images.length === 1 ? (
           <div className={style.sliderWidth}>
-            <div className={style.singleImage} style={{ backgroundImage: `url(${images[0].url})` }}></div>
+            <div className={style.singleImage}>
+              <img 
+                src={images[0].url} 
+                alt="Single Slide" 
+                className={style.imageStyles} 
+              />
+            </div>
           </div>
         ) : (
           <div className={style.sliderWidth}>
