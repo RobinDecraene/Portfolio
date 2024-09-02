@@ -7,7 +7,7 @@ import Title from '../Title/title';
 import { Link, useParams } from 'react-router-dom';
 import ROUTES from '../../Routes/routes';
 import { FaArrowLeft } from "react-icons/fa";
-import LinkButton from '../Button/linkbutton';
+import LinkButton from '../Button/link';
 import { firebase } from '../../firebase';
 import Slider from '../Slider/imageSlider';
 import Loading from '../Loading/loading';
