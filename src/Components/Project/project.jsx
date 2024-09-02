@@ -10,6 +10,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import LinkButton from '../Button/linkbutton';
 import { firebase } from '../../firebase';
 import Slider from '../Slider/imageSlider';
+import Loading from '../Loading/loading';
 
 const Project = () => {
   const { id } = useParams();
@@ -62,7 +63,7 @@ const Project = () => {
   }, [id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
   return (

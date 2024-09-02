@@ -7,11 +7,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Loading from '../../Components/Loading/loading';
 
 const Projects = () => {
   const [websites, setWebsites] = useState([]);
   const [designs, setDesigns] = useState([]);
   const [other, setOther] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchWebsites = async () => {
@@ -40,8 +42,6 @@ const Projects = () => {
       }
     };
 
-    fetchWebsites();
-
     const fetchDesigns = async () => {
       try {
         const querySnapshot = await firebase.firestore().collection('designs').get();
@@ -67,9 +67,6 @@ const Projects = () => {
         console.error('Error fetching designs:', error);
       }
     };
-
-    fetchDesigns();
-
   
     const fetchOther = async () => {
       try {
@@ -96,10 +93,17 @@ const Projects = () => {
         console.error('Error fetching other:', error);
       }
     };
+
     
-    fetchOther();
-    
+    const fetchData = async () => {
+      await Promise.all([fetchWebsites(), fetchDesigns(), fetchOther()]);
+      setLoading(false);
+    };
+
+    fetchData();
+
   }, []);
+
 
   const formatDate = (timestamp) => {
     if (!timestamp) return '';
@@ -112,6 +116,11 @@ const Projects = () => {
       day: 'numeric',
     });
   };
+
+  if (loading) {
+    return <Loading/>;
+  }
+
 
   return (
     <Page>
