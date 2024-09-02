@@ -7,7 +7,7 @@ import { IoIosFitness } from "react-icons/io";
 import Page from '../../Components/Page/page';
 import Section from '../../Components/Section/section';
 import profielfoto from '../../Images/ik.png';
-import LinkButton from '../../Components/Button/linkbutton';
+import LinkButton from '../../Components/Button/link';
 import BigList from '../../Components/list/biglist';
 import SmallList from '../../Components/list/smalllist';
 import { firebase } from '../../firebase';
@@ -52,6 +52,7 @@ const Home = () => {
             toegankelijke en visueel aantrekkelijke website te ontwikkelen.
           </p>
           <LinkButton link='https://www.linkedin.com/in/robin-decraene-5ab306220/'>Mijn LinkedIn</LinkButton>
+
         </div>
       </Section>
 
@@ -119,8 +120,8 @@ const Home = () => {
           <Title>Eigenschappen</Title>
           <p>
             Ik ben een teamspeler die ook de leiding durft te nemen wanneer dat nodig is. Tijdens mijn studie aan Arteveldehogeschool was ik bijvoorbeeld squadlead bij het ontwikkelen van een escaperoom. 
-            Ik kan goed kalm blijven in stressvolle situaties, een vaardigheid die ik heb opgedaan door veel met kleine kinderen te werken. Dit heeft me ook geleerd om zeer verantwoordelijk te zijn. k heb geleerd door veel met kleinde kinderen te werken, 
-            hierdoor ben ik ook zeer verantwoordelijk. Maar het belangrijkste van al is dat ik zeer graag mijn programmeervaardigheden wil verbeteren en zeer graag nieuwe talen wil bijleren. Daarnaast ben ik ook in het bezit van een B-rijbewijs.
+            Ik kan goed kalm blijven in stressvolle situaties, een vaardigheid die ik heb opgedaan door veel met kleine kinderen te werken. Dit heeft me ook geleerd om zeer verantwoordelijk te zijn.
+             Maar het belangrijkste van al is dat ik zeer graag mijn programmeervaardigheden wil verbeteren en zeer graag nieuwe talen wil bijleren. Daarnaast ben ik ook in het bezit van een B-rijbewijs.
           </p>
         </div>
 
