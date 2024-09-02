@@ -124,7 +124,7 @@ const Projects = () => {
 
   return (
     <Page>
-      <Title>Websites</Title>
+      <Title customClass={style.titleTop}>Websites</Title>
       <div className={style.cards}>
         <Swiper
           slidesPerView={4}
@@ -172,7 +172,7 @@ const Projects = () => {
       </div>
 
       <Title>Other</Title>
-      <div className={style.cards}>
+      <div className={style.lastCards}>
         <Swiper
           slidesPerView={4}
           spaceBetween={30}

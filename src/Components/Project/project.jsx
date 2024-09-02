@@ -68,7 +68,7 @@ const Project = () => {
 
   return (
     <Page>
-      <Section>
+      <Section customClass={style.imgSection}>
         <Link to={ROUTES.projects} className={style.arrow}>
           <FaArrowLeft size={25} color='#1B263B' />
         </Link>

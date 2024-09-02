@@ -1,4 +1,8 @@
-.cards {
+.titleTop {
+  padding-top: 4rem;
+}
+
+.cards, .lastCards {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
@@ -6,9 +10,13 @@
 }
 
 @media (min-width: 1842px) {
-  .cards {
+  .cards, .lastCards {
     width: 60%;
   }
+}
+
+.lastCards {
+  padding-bottom: 4rem;
 }
 
 .mySwiper {
