@@ -60,6 +60,12 @@
   width: 80%;
 }
 
+@media (min-width: 1842px) {
+  .sectionBlueWidht {
+    width: 60%;
+  }
+}
+
 .titleWhite {
   color: #fafafa !important;
 }

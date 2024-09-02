@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import 'react-image-gallery/styles/css/image-gallery.css';
 import style from './project.module.css';
 import Page from '../Page/page';
 import Section from '../Section/section';

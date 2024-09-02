@@ -4,6 +4,13 @@
   margin-bottom: 2rem;
   width: 80%;
 }
+
+@media (min-width: 1842px) {
+  .cards {
+    width: 60%;
+  }
+}
+
 .mySwiper {
   height: 10rem;
 }

@@ -31,6 +31,12 @@ nav {
   width: 80%;
 }
 
+@media (min-width: 1842px) {
+  nav {
+    width: 60%;
+  }
+}
+
 .activeNav {
   background-color: #8699B2;
   color: #1B263B;

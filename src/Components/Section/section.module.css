@@ -5,3 +5,9 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+@media (min-width: 1842px) {
+  .section {
+    width: 60%;
+  }
+}
