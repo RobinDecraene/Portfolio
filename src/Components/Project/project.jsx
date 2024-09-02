@@ -17,6 +17,9 @@ const Project = () => {
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]);
+  const [colorImages, setColorImages] = useState([]); // Add state to store color image URLs
+  const [collection, setCollection] = useState('');
+  const [docId, setDocId] = useState('');
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -42,13 +45,24 @@ const Project = () => {
           const imageUrls = await Promise.all(
             imageRefs.items.map(async (item) => {
               const url = await item.getDownloadURL();
-              return {
-                url: url
-              };
+              return { url };
             })
           );
 
           setImages(imageUrls);
+          setCollection(collection);
+          setDocId(doc.id);
+
+          // Fetch color images if they exist
+          if (projectData.colors) {
+            const colorUrls = await Promise.all(
+              projectData.colors.map(async (color) => {
+                const colorRef = firebase.storage().ref(`${imagePath}/colors/${color}.png`);
+                return colorRef.getDownloadURL();
+              })
+            );
+            setColorImages(colorUrls); // Store color images in state
+          }
         } else {
           console.log('No such document in any collection!');
         }
@@ -78,16 +92,13 @@ const Project = () => {
           </div>
         ) : images.length === 1 ? (
           <div className={style.sliderWidth}>
-            <div className={style.singleImage} style={{ backgroundImage: `url(${images[0].url})` }}>
-            </div>
+            <div className={style.singleImage} style={{ backgroundImage: `url(${images[0].url})` }}></div>
           </div>
-
         ) : (
           <div className={style.sliderWidth}>
             <img src={''} alt='No Images Available' />
           </div>
         )}
-
       </Section>
 
       <Section>
@@ -109,13 +120,9 @@ const Project = () => {
           ) : project.colors ? (
             <div className={style.paddingSkill}>
               <Title>Kleurenpalet</Title>
-
-                  {project.colors.map((color, index) => (
-                    <SmallList key={index} color={'#8699B2'} customClass={style.color}>
-                      {color}
-                    </SmallList>
-                  ))}
-
+              {colorImages.map((colorUrl, index) => (
+                <img className={style.imgColor} key={index} src={colorUrl} alt={`color-${index}`} />
+              ))}
             </div>
           ) : null}
 

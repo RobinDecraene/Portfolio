@@ -30,3 +30,11 @@
 .paddingSkill {
   padding-bottom: 2rem;
 }
+
+.imgColor {
+  width: 15%;
+  height: auto;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 5px #E0E1DD;
+}
