@@ -17,6 +17,10 @@ a {
   font-style: normal;
 }
 
+.navStar {
+  margin-right: 0.5rem;
+}
+
 .name {
   font-family: 'Candara', sans-serif;
   font-size: 1.5rem;
@@ -50,5 +54,5 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 12rem;
+  width: 10rem;
 }

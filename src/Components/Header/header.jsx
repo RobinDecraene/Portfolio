@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <a href="/" className={style.name}><FaStar size={25} color='#E0E1DD'/> Robin</a>
+        <a href="/" className={style.name}><FaStar size={25} color='#E0E1DD' className={style.navStar}/>Robin</a>
         <div className={style.navRight}>
         <Link to={ROUTES.home} className={location.pathname === ROUTES.home ? style.activeNav : ''}>Home</Link>
         <Link to={ROUTES.projects} className={location.pathname === ROUTES.projects ? style.activeNav : ''}>Projects</Link>

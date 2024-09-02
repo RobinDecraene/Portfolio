@@ -29,7 +29,7 @@ footer p {
 .footerLeft {
   display: flex;
   justify-content: space-between;
-  width: 12rem;
+  width: 10rem;
 }
 
 .activeNav {

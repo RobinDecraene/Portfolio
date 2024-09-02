@@ -70,6 +70,14 @@
   color: #fafafa !important;
 }
 
+.workColom, .schoolColom {
+  width: 35%;
+}
+
+.skillColom {
+  width: 22%;
+}
+
 .skills {
   display: flex;
   justify-content: space-between;

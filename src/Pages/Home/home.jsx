@@ -58,7 +58,7 @@ const Home = () => {
 
       <section className={style.sectionBlue}>
         <div className={style.sectionBlueWidht}>
-          <div>
+          <div className={style.workColom}>
             <Title customClass={style.titleWhite}>Werkervaring</Title>
             <BigList>
               <p>Esign - Gent</p>
@@ -79,7 +79,7 @@ const Home = () => {
             </BigList>
           </div>
 
-          <div>
+          <div className={style.schoolColom}>
             <Title customClass={style.titleWhite}>Opleiding</Title>
             <BigList>
               <p>Arteveldehogeschool - Gent</p>
@@ -95,7 +95,7 @@ const Home = () => {
             </BigList>
           </div>
 
-          <div>
+          <div className={style.skillColom}>
             <Title customClass={style.titleWhite}>Vaardigheden</Title>
               <div className={style.skills}>
                 <span>

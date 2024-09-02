@@ -98,23 +98,25 @@ const Project = () => {
 
         <div className={style.other}>
           {project.programming ? (
-            <>
+            <div className={style.paddingSkill}>
               <Title>Programmeertalen</Title>
               {project.programming.map((programming, index) => (
                 <SmallList key={index} color={'#8699B2'} customClass={style.color}>
                   {programming}
                 </SmallList>
               ))}
-            </>
+            </div>
           ) : project.colors ? (
-            <>
+            <div className={style.paddingSkill}>
               <Title>Kleurenpalet</Title>
-              {project.colors.map((color, index) => (
-                <SmallList key={index} color={'#8699B2'} customClass={style.color}>
-                  {color}
-                </SmallList>
-              ))}
-            </>
+
+                  {project.colors.map((color, index) => (
+                    <SmallList key={index} color={'#8699B2'} customClass={style.color}>
+                      {color}
+                    </SmallList>
+                  ))}
+
+            </div>
           ) : null}
 
           {project.website ? (
