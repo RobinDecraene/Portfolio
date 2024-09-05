@@ -17,6 +17,13 @@ a {
   font-style: normal;
 }
 
+nav a {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1.25rem;
+}
+
 .navStar {
   margin-right: 0.5rem;
 }
@@ -44,10 +51,7 @@ nav {
 .activeNav {
   background-color: #8699B2;
   color: #1B263B;
-  padding: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 1.25rem;
+  transition: 0.6s;
 }
 
 .navRight {
