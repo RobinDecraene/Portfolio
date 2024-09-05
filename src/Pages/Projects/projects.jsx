@@ -8,6 +8,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Loading from '../../Components/Loading/loading';
+import Card from '../../Components/Card/card';
 
 const Projects = () => {
   const [websites, setWebsites] = useState([]);
@@ -135,10 +136,10 @@ const Projects = () => {
         >
           {websites.map((website, index) => (
             <SwiperSlide key={index}>
-              <a href={`/projects/${website.id}`} className={style.card}>
+              <Card link={`/projects/${website.id}`}>
                 <img src={website.imageUrl} alt={website.title} />
                 <p>{website.title}, {formatDate(website.date)}</p>
-              </a>
+              </Card>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -155,10 +156,10 @@ const Projects = () => {
         >
           {designs.map((design, index) => (
             <SwiperSlide key={index}>
-              <a href={`/projects/${design.id}`} className={style.card}>
+              <Card link={`/projects/${design.id}`}>
                 <img src={design.imageUrl} alt={design.title} />
                 <p>{design.title}, {formatDate(design.date)}</p>
-              </a>
+              </Card>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -175,10 +176,10 @@ const Projects = () => {
         >
           {other.map((other, index) => (
             <SwiperSlide key={index}>
-              <a href={`/projects/${other.id}`} className={style.card}>
+              <Card link={`/projects/${other.id}`}>
                 <img src={other.imageUrl} alt={other.title} />
                 <p>{other.title}, {formatDate(other.date)}</p>
-              </a>
+              </Card>
             </SwiperSlide>
           ))}
           <SwiperSlide></SwiperSlide>
