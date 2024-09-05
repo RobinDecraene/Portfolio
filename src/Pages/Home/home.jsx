@@ -6,15 +6,17 @@ import { IoGameController } from "react-icons/io5";
 import { IoIosFitness } from "react-icons/io";
 import Page from '../../Components/Page/page';
 import Section from '../../Components/Section/section';
-import profielfoto from '../../Images/ik.png';
 import LinkButton from '../../Components/Button/link';
 import BigList from '../../Components/list/biglist';
 import SmallList from '../../Components/list/smalllist';
 import { firebase } from '../../firebase';
+import Loading from '../../Components/Loading/loading';
 
 const Home = () => {
   const [programmingSkills, setProgrammingSkills] = useState([]);
   const [otherSkills, setOtherSkills] = useState([]);
+  const [profilePhoto, setProfilePhoto] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchSkills = async () => {
@@ -31,14 +33,30 @@ const Home = () => {
       }
     };
 
+    const fetchProfilePhoto = async () => {
+      try {
+        const url = await firebase.storage().ref('CV/ik.png').getDownloadURL();
+        setProfilePhoto(url); 
+      } catch (error) {
+        console.error('Error fetching profile photo:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchSkills();
+    fetchProfilePhoto();
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <Page>
       <Section customClass={style.firstSection}>
         <span className={style.image}>
-          <img src={profielfoto} alt='profielfoto' />
+          <img src={profilePhoto} alt='profielfoto' />
         </span>
 
         <div className={style.firstSectionText}>
@@ -49,7 +67,7 @@ const Home = () => {
           <p className={style.intro}>
             Als net afgestudeerde front-end developer wil ik mijn programmeervaardigheden verder ontwikkelen door aan uitdagende projecten te werken.
             Ik streef ernaar mijn kennis van de talen die ik al beheers te verdiepen en nieuwe programmeertalen te leren. Mijn doel is om gebruiksvriendelijke,
-            toegankelijke en visueel aantrekkelijke website te ontwikkelen.
+            toegankelijke en visueel aantrekkelijke websites te ontwikkelen.
           </p>
           <LinkButton link='https://www.linkedin.com/in/robin-decraene-5ab306220/'>Mijn LinkedIn</LinkButton>
 
