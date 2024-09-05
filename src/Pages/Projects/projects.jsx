@@ -37,7 +37,6 @@ const Projects = () => {
           websitesArray.push({ id: doc.id, ...websiteData, imageUrl });
         }
 
-        // Sort websites by date, most recent first
         websitesArray.sort((a, b) => b.date.toDate() - a.date.toDate());
         setWebsites(websitesArray);
       } catch (error) {
@@ -65,7 +64,6 @@ const Projects = () => {
           designsArray.push({ id: doc.id, ...designData, imageUrl });
         }
 
-        // Sort designs by date, most recent first
         designsArray.sort((a, b) => b.date.toDate() - a.date.toDate());
         setDesigns(designsArray);
       } catch (error) {
@@ -93,7 +91,6 @@ const Projects = () => {
           otherArray.push({ id: doc.id, ...otherData, imageUrl });
         }
 
-        // Sort other projects by date, most recent first
         otherArray.sort((a, b) => b.date.toDate() - a.date.toDate());
         setOther(otherArray);
       } catch (error) {
@@ -136,9 +133,13 @@ const Projects = () => {
         >
           {websites.map((website, index) => (
             <SwiperSlide key={index}>
-              <Card link={`/projects/${website.id}`}>
-                <img src={website.imageUrl} alt={website.title} />
-                <p>{website.title}, {formatDate(website.date)}</p>
+              <Card
+                link={`/projects/${website.id}`}
+                img={website.imageUrl}
+                altImg={website.title}
+                title={website.title}
+                date={formatDate(website.date)}
+                >
               </Card>
             </SwiperSlide>
           ))}
@@ -156,9 +157,14 @@ const Projects = () => {
         >
           {designs.map((design, index) => (
             <SwiperSlide key={index}>
-              <Card link={`/projects/${design.id}`}>
-                <img src={design.imageUrl} alt={design.title} />
-                <p>{design.title}, {formatDate(design.date)}</p>
+
+              <Card
+                link={`/projects/${design.id}`}
+                img={design.imageUrl}
+                altImg={design.title}
+                title={design.title}
+                date={formatDate(design.date)}
+                >
               </Card>
             </SwiperSlide>
           ))}
@@ -176,9 +182,13 @@ const Projects = () => {
         >
           {other.map((other, index) => (
             <SwiperSlide key={index}>
-              <Card link={`/projects/${other.id}`}>
-                <img src={other.imageUrl} alt={other.title} />
-                <p>{other.title}, {formatDate(other.date)}</p>
+              <Card
+                link={`/projects/${other.id}`}
+                img={other.imageUrl}
+                altImg={other.title}
+                title={other.title}
+                date={formatDate(other.date)}
+                >
               </Card>
             </SwiperSlide>
           ))}
