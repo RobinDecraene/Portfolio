@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 9rem;
+  width: 97%;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 5px 5px 6px #E0E1DD;
+  transition: 0.4s;
+}
+
+.card:hover {
+  height: 9.2rem;
+  width: 98%;
+}
+
+.card p {
+  visibility: hidden;
+  position: absolute;
+  margin: 0;
+  color: #0D1B2A;
+  font-weight: bolder;
+  transition: 0.2s;
+}
+
+.card:hover p {
+  visibility: visible;
+}
+
+.card img {
+  object-fit: cover;
+  width: 120%;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.card:hover img {
+  opacity: 0.2;
+}
+
