@@ -102,7 +102,7 @@ const Project = () => {
         )}
       </Section>
 
-      <Section>
+      <Section customClass={style.lastSection}>
         <div className={style.description}>
           <Title>{project.title}</Title>
           <p>{project.description}</p>
