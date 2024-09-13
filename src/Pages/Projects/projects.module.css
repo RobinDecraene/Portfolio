@@ -9,16 +9,23 @@
   width: 80%;
 }
 
-@media (min-width: 1842px) {
-  .cards, .lastCards {
-    width: 60%;
-  }
-}
-
 .lastCards {
   padding-bottom: 4rem;
 }
 
 .mySwiper {
   height: 10rem;
+}
+
+@media (min-width: 1842px) {
+  .cards, .lastCards {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .mySwiper {
+    height: 11rem;
+  }
+  
 }

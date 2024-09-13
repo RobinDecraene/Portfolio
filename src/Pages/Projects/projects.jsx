@@ -15,6 +15,7 @@ const Projects = () => {
   const [designs, setDesigns] = useState([]);
   const [other, setOther] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 600);
 
   useEffect(() => {
     const fetchWebsites = async () => {
@@ -104,6 +105,16 @@ const Projects = () => {
     };
 
     fetchData();
+
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth > 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const formatDate = (timestamp) => {
@@ -125,8 +136,16 @@ const Projects = () => {
       <Title customClass={style.titleTop}>Websites</Title>
       <div className={style.cards}>
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
+            breakpoints={{
+              600: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              601: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            }}
           pagination={{ clickable: true }}
           modules={[Pagination]}
           className={style.mySwiper}
@@ -149,8 +168,16 @@ const Projects = () => {
       <Title>Designs</Title>
       <div className={style.cards}>
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
+            breakpoints={{
+              600: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              601: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            }}
           pagination={{ clickable: true }}
           modules={[Pagination]}
           className={style.mySwiper}
@@ -174,8 +201,16 @@ const Projects = () => {
       <Title>Other</Title>
       <div className={style.lastCards}>
         <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
+            breakpoints={{
+              600: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              601: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            }}
           pagination={{ clickable: true }}
           modules={[Pagination]}
           className={style.mySwiper}
@@ -192,8 +227,12 @@ const Projects = () => {
               </Card>
             </SwiperSlide>
           ))}
-          <SwiperSlide></SwiperSlide>
-          <SwiperSlide></SwiperSlide>
+          {isWideScreen && (
+            <>
+              <SwiperSlide></SwiperSlide>
+              <SwiperSlide></SwiperSlide>
+            </>
+          )}
         </Swiper>
       </div>
     </Page>
