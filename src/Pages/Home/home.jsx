@@ -133,7 +133,7 @@ const Home = () => {
         
       </section>
 
-      <Section>
+      <Section customClass={style.lastSection}>
         <div className={style.properties}>
           <Title>Eigenschappen</Title>
           <p>

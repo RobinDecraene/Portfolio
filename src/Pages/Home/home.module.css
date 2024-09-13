@@ -60,12 +60,6 @@
   width: 80%;
 }
 
-@media (min-width: 1842px) {
-  .sectionBlueWidht {
-    width: 60%;
-  }
-}
-
 .titleWhite {
   color: #fafafa !important;
 }
@@ -111,4 +105,60 @@
 
 .languageColor {
   color: #0D1B2A !important;
+}
+
+@media (min-width: 1842px) {
+  .sectionBlueWidht {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .image {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .firstSectionText{
+    width: 100%;
+  }
+
+  .titles h1 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  
+  .titles h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .firstSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sectionBlueWidht {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .workColom, .schoolColom, .skillColom {
+    width: 100%;
+  }
+
+  .lastSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .properties {
+    width: 100%;
+  }
+  
+  .other {
+    width: 100%;
+  }
+
 }
