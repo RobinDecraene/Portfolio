@@ -7,12 +7,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Loading from '../../Components/Loading/loading';
 import Card from '../../Components/Card/card';
 
 const Projects = () => {
   const [websites, setWebsites] = useState([]);
   const [designs, setDesigns] = useState([]);
   const [other, setOther] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 600);
 
   useEffect(() => {
@@ -97,9 +99,12 @@ const Projects = () => {
       }
     };
 
-    fetchWebsites();
-    fetchDesigns();
-    fetchOther();
+    const fetchData = async () => {
+      await Promise.all([fetchWebsites(), fetchDesigns(), fetchOther()]);
+      setLoading(false);
+    };
+
+    fetchData();
 
     const handleResize = () => {
       setIsWideScreen(window.innerWidth > 600);
@@ -121,6 +126,10 @@ const Projects = () => {
       day: 'numeric',
     });
   };
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <Page>
