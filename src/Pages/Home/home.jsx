@@ -10,13 +10,11 @@ import LinkButton from '../../Components/Button/link';
 import BigList from '../../Components/list/biglist';
 import SmallList from '../../Components/list/smalllist';
 import { firebase } from '../../firebase';
-import Loading from '../../Components/Loading/loading';
 
 const Home = () => {
   const [programmingSkills, setProgrammingSkills] = useState([]);
   const [otherSkills, setOtherSkills] = useState([]);
   const [profilePhoto, setProfilePhoto] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchSkills = async () => {
@@ -39,8 +37,6 @@ const Home = () => {
         setProfilePhoto(url); 
       } catch (error) {
         console.error('Error fetching profile photo:', error);
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -48,15 +44,11 @@ const Home = () => {
     fetchProfilePhoto();
   }, []);
 
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     <Page>
       <Section customClass={style.firstSection}>
         <span className={style.image}>
-          <img src={profilePhoto} alt='profielfoto' />
+          <img src={profilePhoto} alt='profielfoto' loading="lazy"/>
         </span>
 
         <div className={style.firstSectionText}>

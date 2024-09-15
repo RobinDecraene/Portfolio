@@ -10,12 +10,10 @@ import { FaArrowLeft } from "react-icons/fa";
 import LinkButton from '../Button/link';
 import { firebase } from '../../firebase';
 import Slider from '../Slider/imageSlider';
-import Loading from '../Loading/loading';
 
 const Project = () => {
   const { id } = useParams();
   const [project, setProject] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]);
   const [colorImages, setColorImages] = useState([]);
 
@@ -63,17 +61,11 @@ const Project = () => {
         }
       } catch (error) {
         console.error('Error fetching project:', error);
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchProject();
   }, [id]);
-
-  if (loading) {
-    return <Loading/>;
-  }
 
   return (
     <Page>
@@ -91,13 +83,14 @@ const Project = () => {
               <img 
                 src={images[0].url} 
                 alt="Single Slide" 
-                className={style.imageStyles} 
+                className={style.imageStyles}
+                loading="lazy"
               />
             </div>
           </div>
         ) : (
           <div className={style.sliderWidth}>
-            <img src={''} alt='No Images Available' />
+            <img src={''} alt='No Images Available' loading="lazy"/>
           </div>
         )}
       </Section>
@@ -122,7 +115,7 @@ const Project = () => {
             <div className={style.paddingSkill}>
               <Title>Kleurenpalet</Title>
               {colorImages.map((colorUrl, index) => (
-                <img className={style.imgColor} key={index} src={colorUrl} alt={`color-${index}`} />
+                <img className={style.imgColor} key={index} src={colorUrl} alt={`color-${index}`} loading="lazy"/>
               ))}
             </div>
           ) : null}
