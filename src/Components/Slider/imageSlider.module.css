@@ -14,14 +14,13 @@
   box-shadow: 6px 6px 20px #E0E1DD;
 }
 
-
 .rightArrowStyles {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   right: -1.2rem;
-  font-size: 45px;
-  color: #415A77;
+  font-size: 2.5rem;
+  color: #1B263B;
   z-index: 1;
   cursor: pointer;
 }
@@ -31,8 +30,8 @@
   top: 50%;
   transform: translate(0, -50%);
   left: -1.2rem;
-  font-size: 45px;
-  color: #415A77;
+  font-size: 2.5rem;
+  color: #1B263B;
   z-index: 1;
   cursor: pointer;
 }
@@ -59,4 +58,18 @@
 .activeDot {
   font-size: 30px;
   color: #1B263B;
+}
+
+
+@media (max-width: 600px) {
+
+  .rightArrowStyles {
+    font-size: 1.5rem;
+  }
+  
+  .leftArrowStyles {
+    font-size: 1.5rem;
+  }
+  
+
 }

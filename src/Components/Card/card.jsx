@@ -4,7 +4,7 @@ import style from './card.module.css';
 const Card = ({ link, img, altImg, title, date}) => {
   return (
     <a href={link} className={style.card}>
-      <img src={img} alt={altImg} />
+      <img src={img} alt={altImg} loading="lazy"/>
       <div className={style.overlay}>
         <p>{title}, {date}</p>
       </div>
