@@ -6,7 +6,6 @@ import { FaStar } from "react-icons/fa";
 
 const Header = () => {
   const location = useLocation();
-
   const isProjectsActive = location.pathname.startsWith(ROUTES.projects);
 
   return (

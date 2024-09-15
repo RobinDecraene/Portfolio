@@ -5,7 +5,7 @@ footer {
   display: flex;
   justify-content: center;
   background-color: #0D1B2A;
-  padding: 1rem;
+
 }
 
 footer p {
@@ -17,14 +17,8 @@ footer p {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  padding: 1rem;
 }
-
-@media (min-width: 1842px) {
-  .footerAlign {
-    width: 60%;
-  }
-}
-
 
 .footerLeft {
   display: flex;
@@ -35,4 +29,28 @@ footer p {
 .activeNav {
   color: #8699B2;
   font-weight: bold;
+}
+
+@media (min-width: 1842px) {
+  .footerAlign {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerAlign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .footerAlign p {
+    margin-bottom: 0;
+  }
+  
+  .footerLeft {
+    display: none;
+  }
 }

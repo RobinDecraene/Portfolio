@@ -2,7 +2,9 @@ header {
   display: flex;
   justify-content: center;
   background-color: #0D1B2A;
-  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 a {
@@ -33,6 +35,7 @@ nav a {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  padding-left: 0;
 }
 
 nav {
@@ -40,12 +43,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  padding: 1rem;
 }
 
-@media (min-width: 1842px) {
-  nav {
-    width: 60%;
-  }
+.navRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
 }
 
 .activeNav {
@@ -54,9 +59,8 @@ nav {
   transition: 0.6s;
 }
 
-.navRight {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 10rem;
+@media (min-width: 1842px) {
+  nav {
+    width: 60%;
+  }
 }
