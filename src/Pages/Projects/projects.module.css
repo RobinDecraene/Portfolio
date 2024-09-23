@@ -11,21 +11,30 @@
 
 .lastCards {
   padding-bottom: 4rem;
+  width: 60%;
 }
 
 .mySwiper {
-  height: 10rem;
+  height: 14rem;
 }
 
 @media (min-width: 1842px) {
-  .cards, .lastCards {
+  .cards {
     width: 60%;
+  }
+
+  .lastCards {
+    width: 40%;
   }
 }
 
 @media (max-width: 600px) {
   .mySwiper {
-    height: 11rem;
+    height: 12rem;
+  }
+
+  .lastCards {
+    width: 80%;
   }
   
 }

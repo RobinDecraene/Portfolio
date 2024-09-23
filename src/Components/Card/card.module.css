@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 9rem;
+  height: 12rem;
   width: 97%;
   border-radius: 1.25rem;
   overflow: hidden;
@@ -56,4 +56,11 @@
 .card:active {
   height: 9.2rem;
   width: 98%;
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    height: 10rem;
+  }
 }
