@@ -1,3 +1,10 @@
+/* General Slider Styles */
+.sliderStyles {
+  position: relative;
+  height: 100%;
+}
+
+/* Slide container */
 .slideStyles {
   height: 100%;
   width: 100%;
@@ -14,31 +21,45 @@
   box-shadow: 6px 6px 20px #E0E1DD;
 }
 
+.leftArrowStyles,
 .rightArrowStyles {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: -1.2rem;
   font-size: 2.5rem;
   color: #1B263B;
   z-index: 1;
   cursor: pointer;
 }
 
-.leftArrowStyles {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: -1.2rem;
-  font-size: 2.5rem;
-  color: #1B263B;
-  z-index: 1;
-  cursor: pointer;
+@media (min-width: 1001px) {
+  .leftArrowStyles {
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translate(0, -50%);
+  }
+
+  .rightArrowStyles {
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    transform: translate(0, -50%);
+  }
 }
 
-.sliderStyles {
-  position: relative;
-  height: 100%;
+@media (max-width: 1000px) {
+  .slideNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .leftArrowStyles {
+    margin-right: 2rem;
+  }
+
+  .rightArrowStyles {
+    margin-left: 2rem;
+  }
 }
 
 .dotsContainerStyles {
@@ -60,16 +81,9 @@
   color: #1B263B;
 }
 
-
-@media (max-width: 600px) {
-
+@media (max-width: 601px) {
+  .leftArrowStyles,
   .rightArrowStyles {
     font-size: 1.5rem;
   }
-  
-  .leftArrowStyles {
-    font-size: 1.5rem;
-  }
-  
-
 }

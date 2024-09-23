@@ -22,38 +22,39 @@ const Slider = ({ slides }) => {
 
   return (
     <div className={style.sliderStyles}>
-      <div>
-        <div onClick={goToPrevious} className={style.leftArrowStyles}>
-          ❰
-        </div>
-        <div onClick={goToNext} className={style.rightArrowStyles}>
-          ❱
-        </div>
-      </div>
-      <div
-        className={style.slideStyles}
-      >
+      <div className={style.slideStyles}>
         <img
           src={slides[currentIndex].url}
           alt={`Slide ${currentIndex}`}
           className={style.imageStyles}
         />
       </div>
-      <div className={style.dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
-          <div
-            className={`${style.dotStyle} ${
-              slideIndex === currentIndex ? style.activeDot : ''
-            }`}
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-          >
-            ●
-          </div>
-        ))}
+
+      <div className={style.slideNav}>
+        <div onClick={goToPrevious} className={style.leftArrowStyles}>
+          ❰
+        </div>
+
+        <div className={style.dotsContainerStyles}>
+          {slides.map((slide, slideIndex) => (
+            <div
+              className={`${style.dotStyle} ${
+                slideIndex === currentIndex ? style.activeDot : ''
+              }`}
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+            >
+              ●
+            </div>
+          ))}
+        </div>
+
+        <div onClick={goToNext} className={style.rightArrowStyles}>
+          ❱
+        </div>
       </div>
     </div>
-  );  
+  );
 };
 
 export default Slider;

@@ -28,13 +28,20 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .mySwiper {
-    height: 12rem;
+    height: 15rem;
   }
 
   .lastCards {
     width: 80%;
   }
   
+}
+
+
+@media (max-width: 800px) {
+  .mySwiper {
+    height: 12rem;
+  }
 }
