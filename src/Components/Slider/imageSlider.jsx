@@ -37,7 +37,6 @@ const Slider = ({ slides }) => {
           src={slides[currentIndex].url}
           alt={`Slide ${currentIndex}`}
           className={style.imageStyles}
-          loading="lazy"
         />
       </div>
       <div className={style.dotsContainerStyles}>

@@ -92,13 +92,12 @@ const Project = () => {
                 src={images[0].url} 
                 alt="Single Slide" 
                 className={style.imageStyles} 
-                loading='lazy'
               />
             </div>
           </div>
         ) : (
           <div className={style.sliderWidth}>
-            <img src={''} alt='No Images Available' loading='lazy'/>
+            <img src={''} alt='No Images Available'/>
           </div>
         )}
       </Section>
@@ -123,7 +122,7 @@ const Project = () => {
             <div className={style.paddingSkill}>
               <Title>Kleurenpalet</Title>
               {colorImages.map((colorUrl, index) => (
-                <img className={style.imgColor} key={index} src={colorUrl} alt={`color-${index}`} loading='lazy'/>
+                <img className={style.imgColor} key={index} src={colorUrl} alt={`color-${index}`}/>
               ))}
             </div>
           ) : null}

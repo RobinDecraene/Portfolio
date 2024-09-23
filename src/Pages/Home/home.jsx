@@ -33,7 +33,7 @@ const Home = () => {
 
     const fetchProfilePhoto = async () => {
       try {
-        const url = await firebase.storage().ref('CV/ik.png').getDownloadURL();
+        const url = await firebase.storage().ref('CV/ik.webp').getDownloadURL();
         setProfilePhoto(url); 
       } catch (error) {
         console.error('Error fetching profile photo:', error);
@@ -48,7 +48,7 @@ const Home = () => {
     <Page>
       <Section customClass={style.firstSection}>
         <span className={style.image}>
-          <img src={profilePhoto} alt='profielfoto' loading="lazy"/>
+          <img src={profilePhoto} alt='profielfoto'/>
         </span>
 
         <div className={style.firstSectionText}>
