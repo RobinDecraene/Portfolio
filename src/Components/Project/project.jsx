@@ -58,7 +58,7 @@ const Project = () => {
           if (projectData.colors) {
             const colorUrls = await Promise.all(
               projectData.colors.map(async (color) => {
-                const colorRef = firebase.storage().ref(`${imagePath}/colors/${color}.png`);
+                const colorRef = firebase.storage().ref(`${imagePath}/colors/${color}.webp`);
                 return colorRef.getDownloadURL();
               })
             );
