@@ -9,8 +9,14 @@ import ROUTES from '../../Routes/routes';
 import { FaArrowLeft } from "react-icons/fa";
 import LinkButton from '../Button/link';
 import { firebase } from '../../firebase';
-import Slider from '../Slider/imageSlider';
 import Loading from '../Loading/loading';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Mousewheel, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 const Project = () => {
   const { id } = useParams();
@@ -81,25 +87,28 @@ const Project = () => {
         <Link to={ROUTES.projects} className={style.arrow}>
           <FaArrowLeft size={25} color='#1B263B' />
         </Link>
-        {images.length > 1 ? (
-          <div className={style.sliderWidth}>
-            <Slider slides={images} />
-          </div>
-        ) : images.length === 1 ? (
-          <div className={style.sliderWidth}>
-            <div className={style.singleImage}>
-              <img 
-                src={images[0].url} 
-                alt="Single Slide" 
-                className={style.imageStyles} 
-              />
-            </div>
-          </div>
-        ) : (
-          <div className={style.sliderWidth}>
-            <img src={''} alt='No Images Available'/>
-          </div>
-        )}
+          <Swiper
+            style={{
+              '--swiper-navigation-color': '#0D1B2A',
+              '--swiper-pagination-color': '#0D1B2A',
+            }}
+            loop={true}
+            spaceBetween={10}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            mousewheel={true}
+            modules={[Autoplay, Mousewheel, Pagination, Navigation]}
+            className={style.mySwiper}
+          >
+            {images.map((image, index) => (
+              <SwiperSlide className={style.sliderWidth} key={index}>
+                <img className={style.imageStyles} src={image.url} alt={`Slide ${index + 1}`} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
       </Section>
 
       <Section customClass={style.lastSection}>

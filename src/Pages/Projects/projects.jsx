@@ -4,7 +4,7 @@ import Title from '../../Components/Title/title';
 import Page from '../../Components/Page/page';
 import { firebase } from '../../firebase';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Mousewheel, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Loading from '../../Components/Loading/loading';
@@ -125,26 +125,30 @@ const Projects = () => {
       <Title customClass={style.titleTop}>Websites</Title>
       <div className={style.cards}>
         <Swiper
-            breakpoints={{
-              600: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-              },
-              601: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              1000: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-              12000: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            }}
+          style={{
+            '--swiper-pagination-color': '#0D1B2A',
+          }}
+          breakpoints={{
+            600: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            601: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1000: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            12000: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }}
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          mousewheel={true}
+          modules={[Mousewheel, Pagination]}
           className={style.mySwiper}
         >
           {websites.map((website, index) => (
@@ -165,26 +169,30 @@ const Projects = () => {
       <Title>Designs</Title>
       <div className={style.cards}>
         <Swiper
-            breakpoints={{
-              600: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-              },
-              601: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              1000: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-              12000: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            }}
+          style={{
+            '--swiper-pagination-color': '#0D1B2A',
+          }}
+          breakpoints={{
+            600: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            601: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1000: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            12000: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }}
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          mousewheel={true}
+          modules={[Mousewheel, Pagination]}
           className={style.mySwiper}
         >
           {designs.map((design, index) => (
@@ -206,18 +214,22 @@ const Projects = () => {
       <Title>Other</Title>
       <div className={style.lastCards}>
         <Swiper
-            breakpoints={{
-              600: {
-                slidesPerView: 1,
-                spaceBetween: 30,
-              },
-              601: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-            }}
+          style={{
+            '--swiper-pagination-color': '#0D1B2A',
+          }}
+          breakpoints={{
+            600: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            601: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+          }}
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          mousewheel={true}
+          modules={[Mousewheel, Pagination]}
           className={style.mySwiper}
         >
           {other.map((other, index) => (
