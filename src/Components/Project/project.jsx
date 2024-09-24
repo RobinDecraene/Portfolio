@@ -56,10 +56,12 @@ const Project = () => {
           setImages(imageUrls);
 
           if (projectData.colors) {
+            const colorFolderRef = firebase.storage().ref(`${imagePath}/colors`);
+            const colorImageRefs = await colorFolderRef.listAll();
+
             const colorUrls = await Promise.all(
-              projectData.colors.map(async (color) => {
-                const colorRef = firebase.storage().ref(`${imagePath}/colors/${color}.webp`);
-                return colorRef.getDownloadURL();
+              colorImageRefs.items.map(async (item) => {
+                return item.getDownloadURL();
               })
             );
             setColorImages(colorUrls);
@@ -78,7 +80,7 @@ const Project = () => {
   }, [id]);
 
   if (loading) {
-    return <Loading/>;
+    return <Loading />;
   }
 
   return (
