@@ -141,7 +141,7 @@ const Projects = () => {
               slidesPerView: 3,
               spaceBetween: 30,
             },
-            12000: {
+            1842: {
               slidesPerView: 4,
               spaceBetween: 30,
             },
@@ -185,7 +185,7 @@ const Projects = () => {
               slidesPerView: 3,
               spaceBetween: 30,
             },
-            12000: {
+            1842: {
               slidesPerView: 4,
               spaceBetween: 30,
             },
