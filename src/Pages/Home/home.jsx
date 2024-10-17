@@ -57,7 +57,7 @@ const Home = () => {
             <h2>Front end developer</h2>
           </span>
           <p className={style.intro}>
-            Als net afgestudeerde front-end developer wil ik mijn programmeervaardigheden verder ontwikkelen door aan uitdagende projecten te werken.
+            Als front-end developer wil ik graag mijn programmeervaardigheden verder ontwikkelen door aan uitdagende projecten te werken.
             Ik streef ernaar mijn kennis van de talen die ik al beheers te verdiepen en nieuwe programmeertalen te leren. Mijn doel is om gebruiksvriendelijke,
             toegankelijke en visueel aantrekkelijke websites te ontwikkelen.
           </p>
@@ -136,34 +136,13 @@ const Home = () => {
         </div>
 
         <div className={style.other}>
-          <div>
-            <Title>Hobbies</Title>
-            <div className={style.hobbies}>
-              <span>
-                <FaHorse size={30} color='#8699B2'/>
-                <p>Paardrijden</p>
-              </span>
 
-              <span>
-                <IoGameController size={30} color='#8699B2'/>
-                <p>Gamen</p>
-              </span>
-
-              <span>
-                <IoIosFitness size={30} color='#8699B2'/>
-                <p>Fitness</p>
-              </span>
-            </div>
-          </div>
-
-          <div>
             <Title>Talen</Title>
             <span className={style.language}>
               <SmallList color={'#8699B2'} customClass={style.languageColor}>Nederlands</SmallList>
               <SmallList color={'#8699B2'} customClass={style.languageColor}>Engels</SmallList>
             </span>
 
-          </div>
         </div>
       </Section>
     </Page>
