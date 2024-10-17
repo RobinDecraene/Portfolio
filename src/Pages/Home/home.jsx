@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import style from './home.module.css';
 import Title from '../../Components/Title/title';
-import { FaHorse } from "react-icons/fa";
-import { IoGameController } from "react-icons/io5";
-import { IoIosFitness } from "react-icons/io";
 import Page from '../../Components/Page/page';
 import Section from '../../Components/Section/section';
 import LinkButton from '../../Components/Button/link';
