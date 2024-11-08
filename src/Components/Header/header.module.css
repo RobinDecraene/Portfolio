@@ -42,7 +42,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 76.25rem;
   padding: 1rem;
 }
 
@@ -57,10 +57,4 @@ nav {
   background-color: #8699B2;
   color: #1B263B;
   transition: 0.6s;
-}
-
-@media (min-width: 1842px) {
-  nav {
-    width: 60%;
-  }
 }
