@@ -1,7 +1,49 @@
 .section {
   display: flex;
   justify-content: space-between;
-  width: 76.25rem;
+  width: 90rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+@media (max-width: 1600px) {
+  .section {
+    width: 86.25rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .section {
+    width: 73.75rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section {
+    width: 60rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .section {
+    width: 46.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    width: 36.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    width: 28.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    width: 20rem;
+  }
 }

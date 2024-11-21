@@ -16,7 +16,7 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 76.25rem;
+  width: 90rem;
   padding: 1rem;
 }
 
@@ -31,20 +31,57 @@ footer p {
   font-weight: bold;
 }
 
+@media (max-width: 1600px) {
+  .footerAlign {
+    width: 86.25rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .footerAlign {
+    width: 73.75rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footerAlign {
+    width: 60rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .footerAlign {
+    width: 46.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerAlign {
+    width: 36.25rem;
+  }
+}
+
 @media (max-width: 600px) {
   .footerAlign {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 28.75rem;
   }
 
+  
   .footerAlign p {
     margin-bottom: 0;
   }
   
   .footerLeft {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerAlign {
+    width: 20rem;
   }
 }
